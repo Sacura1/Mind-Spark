@@ -75,12 +75,13 @@ const Homee = () => {
             <p className="text-base sm:text-lg md:text-xl leading-relaxed">
               Resharpen Your Mind And Improve your knowledge About The World Supercomputer
             </p>
-            <div className="flex w-20 h-20 justify-center mr-5  my-3">
+            <div className="flex flex-col items-center justify-center my-3">
               <img
-                src={nexusLogo}
-                alt="logo"
+              className="w-20 h-20"
+              src={nexusLogo}
+              alt="logo"
               />
-                <h2 className="flex items-center ml-2 text-xl font-semibold text-white-300">Nexus</h2>
+              <h2 className="mt-2 text-xl font-semibold text-white">Nexus</h2>
             </div>
             <p className="text-sm sm:text-base md:text-lg">
               You can participate in quizzes to get a place on the leaderboard

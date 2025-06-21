@@ -68,8 +68,8 @@ useEffect(() => {
   const isWeeklyQuiz = window.location.pathname.includes('weekly-quiz');
   try {
     const endpoint = isWeeklyQuiz 
-      ? 'http://localhost:3001/api/weekly_leaderboard' 
-      : 'http://localhost:3001/api/scores';
+      ? `${import.meta.env.VITE_API_URL}/api/weekly_leaderboard` 
+      : `${import.meta.env.VITE_API_URL}/api/scores`;
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
