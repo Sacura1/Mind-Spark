@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Clock, Trophy, CheckCircle, Zap, Brain, Import } from "lucide-react";
+import { Clock, Trophy, CheckCircle, Zap, Brain } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface Question {
@@ -54,8 +54,8 @@ useEffect(() => {
   const isWeeklyQuiz = window.location.pathname.includes('weekly-quiz');
   try {
     const endpoint = isWeeklyQuiz 
-      ? `${import.meta.env.VITE_API_URL}/api/weekly_leaderboard` 
-      : `${import.meta.env.VITE_API_URL}/api/scores`;
+      ? '/api/weekly_leaderboard' 
+      : '/api/scores';
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
