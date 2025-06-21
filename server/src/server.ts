@@ -9,7 +9,7 @@ dotenv.config()
 
 const corsOptions = {
   origin: [
-    'http://localhost:3001',
+    'http://localhost:10000',
     'https://mind-spark-frontend.onrender.com',
     'https://www.mindsparkgame.com'   
   ],
