@@ -11,8 +11,8 @@ const corsOptions = {
   origin: [
     'http://localhost:10000',
     'https://mind-spark-frontend.onrender.com',
-    'https://www.mindsparkgame.com'   
-  ],
+    'https://www.mindsparkgame.com'
+   ],
   credentials: true,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
