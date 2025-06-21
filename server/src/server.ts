@@ -10,7 +10,7 @@ dotenv.config()
 const corsOptions = {
   origin: [
     'http://localhost:3001',
-    'http://localhost:5173',   
+    'https://mind-spark-frontend.onrender.com/',   
   ],
   credentials: true,
   optionsSuccessStatus: 200,
@@ -34,7 +34,7 @@ const pool = new Pool({
 app.post('/api/weekly_leaderboard', async (req, res) => {
   try {
     const { username, score, timeTaken } = req.body;
-    const weekStart = getCurrentWeekStart(); // From previous implementation
+    const weekStart = getCurrentWeekStart(); 
     
     await pool.query(
       `INSERT INTO weekly_leaderboard (username, score, timetaken, week_start)
