@@ -15,3 +15,5 @@ npm-debug.log*
 client/dist
 server/dist
 questions.json
+
+server/src/questions.json
