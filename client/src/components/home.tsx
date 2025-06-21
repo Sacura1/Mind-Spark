@@ -1,6 +1,7 @@
 import { useState} from 'react';
 import { Zap, ArrowRight, User, Sparkles, Brain, Trophy } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import nexusLogo from '../assets/nexus_logo.png';
 
 const Homee = () => {
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
@@ -76,8 +77,7 @@ const Homee = () => {
             </p>
             <div className="flex justify-center mr-5  my-3">
               <img
-                className="w-20 h-20 object-contain"
-                src="./assets/nexus_logo.png"
+                src={nexusLogo}
                 alt="logo"
               />
                 <h2 className="flex items-center ml-2 text-xl font-semibold text-white-300">Nexus</h2>
