@@ -14,7 +14,7 @@ const WeeklyLeaderboard = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/weekly_leaderboard`);
+        const response = await fetch('/api/weekly_leaderboard');
         if (!response.ok) throw new Error('Failed to fetch leaderboard');
         
         const data = await response.json();

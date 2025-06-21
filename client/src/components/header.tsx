@@ -50,6 +50,10 @@ const Header = () => {
                 <BarChart3 className="h-4 w-4" />
                 <span>Weekly Leaderboard</span>
               </a>
+              <a href="/" className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-2">
+                <BarChart3 className="h-4 w-4" />
+                <span>home</span>
+              </a>
             </div>
           </div>
         )}

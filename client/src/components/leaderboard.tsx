@@ -20,7 +20,7 @@ const Leaderboard = () => {
   const fetchLeaderboard = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/leaderboard`);
+      const response = await fetch('/api/leaderboard');
       if (!response.ok) throw new Error('Failed to fetch leaderboard');
       const contentType = response.headers.get('content-type');
       if (!contentType?.includes('application/json')) {

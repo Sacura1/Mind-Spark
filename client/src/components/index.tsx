@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Clock, Trophy, CheckCircle, Zap, Brain } from "lucide-react";
+import { Clock, Trophy, CheckCircle, Zap, Brain, Import } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface Question {
@@ -26,32 +26,18 @@ const Quiz = () => {
 useEffect(() => {
   const fetchQuestions = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/questions');
+      const response = await fetch('/api/questions');
       if (!response.ok) throw new Error('Failed to fetch questions');
       const data = await response.json();
       const shuffled = [...data].sort(() => 0.5 - Math.random());
       const randomQuestions = shuffled.slice(0, 20);
       setQuestions(randomQuestions);
+      console.log(randomQuestions)
     } catch (error) {
       console.error('Error fetching questions, using fallback:', error);
-      const fallbackQuestions = [
-        {
-          id: 1,
-          question: "What is the primary advantage of blockchain's distributed ledger technology?",
-          options: [
-            "Faster processing speeds",
-            "Decentralization and immutability",
-            "Lower energy consumption",
-            "Better user interfaces"
-          ],
-          correct_answer: 1
-        },
-      ];
-      const randomFallback = [...fallbackQuestions]
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 20);
-      setQuestions(randomFallback);
-      console.log("Using fallback questions:", randomFallback);
+      alert("fetch faild")
+          alert(error)
+    
     } finally {
       setIsLoading(false);
     }
