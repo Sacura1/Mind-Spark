@@ -75,7 +75,7 @@ const Homee = () => {
             <p className="text-base sm:text-lg md:text-xl leading-relaxed">
               Resharpen Your Mind And Improve your knowledge About The World Supercomputer
             </p>
-            <div className="flex justify-center mr-5  my-3">
+            <div className="flex w-20 h-20 justify-center mr-5  my-3">
               <img
                 src={nexusLogo}
                 alt="logo"
