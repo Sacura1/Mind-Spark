@@ -77,7 +77,7 @@ const Homee = () => {
             <div className="flex justify-center mr-5  my-3">
               <img
                 className="w-20 h-20 object-contain"
-                src="src/assets/nexus_logo.png"
+                src="./assets/nexus_logo.png"
                 alt="logo"
               />
                 <h2 className="flex items-center ml-2 text-xl font-semibold text-white-300">Nexus</h2>
