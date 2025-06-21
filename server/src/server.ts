@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-const questions = require('./questions.json');
 dotenv.config()
 
 const corsOptions = {
