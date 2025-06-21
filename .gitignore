@@ -14,3 +14,4 @@ yarn-error.log*
 npm-debug.log*
 client/dist
 server/dist
+questions.json
