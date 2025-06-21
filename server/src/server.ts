@@ -11,9 +11,7 @@ dotenv.config()
 const corsOptions = {
   origin: [
     'http://localhost:3001',
-    'http://localhost:5173',  
-    'https://www.azbug.net',
-    'https://azbug-backend.onrender.com', 
+    'http://localhost:5173',   
   ],
   credentials: true,
   optionsSuccessStatus: 200,
@@ -34,7 +32,6 @@ const pool = new Pool({
 });
 
 
-// Weekly Leaderboard API
 app.post('/api/weekly_leaderboard', async (req, res) => {
   try {
     const { username, score, timeTaken } = req.body;
@@ -53,7 +50,6 @@ app.post('/api/weekly_leaderboard', async (req, res) => {
   }
 });
 
-// Get Weekly Leaderboard
 app.get('/api/weekly_leaderboard', async (req, res) => {
   try {
     const weekStart = getCurrentWeekStart();
@@ -73,13 +69,12 @@ app.get('/api/weekly_leaderboard', async (req, res) => {
   }
 });
 
-// Helper function to get week start (previous Friday at 14:00 UTC)
 function getCurrentWeekStart() {
   const now = new Date();
   const day = now.getUTCDay();
   const hour = now.getUTCHours();
   
-  let daysToSubtract = (day + 2) % 7; // Friday is day 5 (0=Sun, 1=Mon,...5=Fri)
+  let daysToSubtract = (day + 2) % 7; 
   if (day === 5 && hour < 14) daysToSubtract = 7;
   
   const weekStart = new Date(now);
@@ -90,7 +85,6 @@ function getCurrentWeekStart() {
 }
 
 
-// API Endpoints
 app.get('/api/questions', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM questions ORDER BY id');
