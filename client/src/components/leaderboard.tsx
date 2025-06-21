@@ -126,7 +126,7 @@ const Leaderboard = () => {
               </h1>
             </div>
             <p className="text-gray-400 text-sm md:text-base max-w-md mx-auto">
-              Top performers in blockchain and supercomputing knowledge challenge
+              Top performers in Nexus blockchain knowledge challenge
             </p>
           </div>
         </div>
