@@ -132,10 +132,10 @@ const Leaderboard = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8">
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-xl p-4 shadow-lg">
+          {/* <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-xl p-4 shadow-lg">
             <div className="text-cyan-400 text-xs md:text-sm font-semibold">TOTAL PARTICIPANTS</div>
             <div className="text-xl text-blue-200 md:text-3xl font-bold mt-1">{leaderboardData.length}</div>
-          </div>
+          </div> */}
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-xl p-4 shadow-lg">
             <div className="text-cyan-400 text-xs md:text-sm font-semibold">BEST SCORE</div>
             <div className="text-xl md:text-3xl font-bold mt-1 text-blue-200">
