@@ -11,6 +11,7 @@ const corsOptions = {
   origin: [
     'https://www.mindsparkgame.com',
     'http://192.168.0.142:10000',
+    'http://localhost:10000/',
     'https://mindspark-backend-tqhe.onrender.com',
    ],
   credentials: true,
@@ -115,16 +116,29 @@ app.get('/api/leaderboard', async (req, res) => {
     const result = await pool.query(`
       SELECT username, score, time_taken AS timetaken
       FROM leaderboard
-      ORDER BY score DESC, time_taken ASC
-      LIMIT 10
+      ORDER BY score DESC, time_taken ASC LIMIT 10
+    
     `);
     res.json(result.rows);
+    console.log(result.rows)
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Failed to fetch leaderboard' });
   }
 });
 
+app.get('/api/participants', async (req, res) => {
+  try {
+    const result = await pool.query(`
+      SELECT username FROM leaderboard
+    `);
+    res.json(result.rows.length);
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to fetch leaderboard' });
+  }
+});
 
 
 
